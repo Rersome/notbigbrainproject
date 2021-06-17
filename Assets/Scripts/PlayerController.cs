@@ -31,11 +31,11 @@ public class PlayerController : PhysicsObject
         {
             if (velocity.y > 0)
             {
-                velocity.y = velocity.y * 0.8f;
+                velocity.y = velocity.y * 0.3f;
             }
         }
 
-        bool flipSprite = ((spriteRenderer.flipX) ? (move.x > 0.01f) : (move.x < 0.01f));
+        bool flipSprite = ((spriteRenderer.flipX) ? (move.x < 0.01f) : (move.x > 0.01f));
         if (flipSprite)
         {
             spriteRenderer.flipX = !spriteRenderer.flipX;
