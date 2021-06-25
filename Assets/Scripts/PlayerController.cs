@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : PhysicsObject
+public class PlayerController : MonoBehaviour
 {
 
     [SerializeField] float m_speed = 4.0f;
@@ -15,7 +15,6 @@ public class PlayerController : PhysicsObject
     private bool m_combatIdle = false;
     private bool m_isDead = false;
 
-    // Use this for initialization
     void Start()
     {
         m_animator = GetComponent<Animator>();
@@ -23,7 +22,6 @@ public class PlayerController : PhysicsObject
         m_groundSensor = transform.Find("GroundSensor").GetComponent<GroundDetector>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         //Check if character just landed on the ground
